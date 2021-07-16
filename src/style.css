@@ -1,0 +1,7 @@
+figure {
+    display:inline-flex; 
+}
+figcaption {
+    align-items: baseline;
+ 
+}
