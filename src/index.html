@@ -1,207 +1,198 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <!--Esta es la cabecera de una página o un bloque de contenido-->
-      <div class="contenedorPrincipal">
-          <div>
-          </div>
-          <div>
-              <!--<input type="text" placeholder="Buscar pelicula">-->
-              <select name="languague" class="selector">
-                  <option value="pt">Ponyo</option>
-                  <option value="id">Mar</option>
-                  <option value="es" selected="">Tororo</option>
-                  <option value="it">El jardin</option>
-                  <option value="de">Marnie</option>
-                  <option value="fr">El castillo</option>
-                  <option value="ru">Ponyo</option>
-                  <option value="pl">viaje </option>
-              </select>
-          </div>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!--Cabecera-->
+  <header>
+    <div class="header-container">
+      <!--seleccion por pelicula-->
+      <div>
+        <select name="languague" class="selector">
+          <option value="pt">Ponyo</option>
+          <option value="id">Mar</option>
+          <option value="es" selected="">Tororo</option>
+        </select>
       </div>
-    </header>
-        <nav id="opciones">
-          <select name="AÑO" class="selector">
-              <option value="a">1985</option>
-              <option value="b">1986</option>
-              <option value="c">1987</option>
-              <option value="d">1988</option>
-              </select>
+    </div>
+  </header>
+  <!--opciones por: fecha, score, director-->
+  <nav id="opciones">
+    <select name="" class="selector">
+      <option value="a" selected>Año</option>
+      <option value="b">1986</option>
+      <option value="c">1987</option>
+    </select>
+    <select name="" class="selector">
+      <option value="a" selected>Calificacion</option>
+      <option value="b">86%</option>
+      <option value="c">17%</option>
+    </select>
+    <select name="" class="selector">
+      <option value="pt" selected>Director</option>
+      <option value="id">日本语</option>
+      <option value="es" >Collete</option>
+    </select>
+  </nav>
 
-              <select name="os0" class="selector">
-                  <option value="a">99%</option>
-                  <option value="b">86%</option>
-                  <option value="c">17%</option>
-                  <option value="d">98</option>
-                  </select>
-                  <select name="languague" class="selector">
-                      <option value="pt">Pao</option>
-                      <option value="id">日本语</option>
-                      <option value="es" selected="">Collete</option>
-                      <option value="it">日本语</option>
-                      <option value="de">Alma</option>
-                      <option value="fr">日本语</option>
-                      <option value="ru">Ofe</option>
-                      <option value="pl">日本语</option>
-                  </select>
-
-          <!--Esta es la barra de navegación principal del sitio-->
-        </nav>
-    
-      <main>
-       <section>
-        <div class="container">
-          <div class="card">
-              <img class="size" src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg">
-              <h4>Nom pelicula</h4>
-              <p>Año</p>
-              <a href="#">Leer más</a>
-          </div>
-          
-          <div class="card">
-              <img class="size" src="https://static.wikia.nocookie.net/studio-ghibli/images/a/a5/Grave_of_the_Fireflies_Japanese_poster.jpg">
-              <h4>Nom pelicula</h4>
-              <p>Año</p>
-              <a href="#">Leer más</a>
-          </div>
-          
-          <div class="card">
-              <img class="size" src="https://static.wikia.nocookie.net/studio-ghibli/images/d/db/My_Neighbor_Totoro.jpg">
-              <h4>Nom pelicula</h4>
-              <p>Año</p>
-              <a href="#">Leer más</a>
-          </div>
-
-          <div class="card">
-            <img class="size" src="https://static.wikia.nocookie.net/studio-ghibli/images/a/a9/Only_Yesterday.jpg">
-            <h4>Nom pelicula</h4>
-            <p>Año</p>
-            <a href="#">Leer más</a>
-        </div>
-
+  <main>
+    <section>
+      <div class="container">
         <div class="card">
-          <img class="size" src="https://static.wikia.nocookie.net/studio-ghibli/images/4/41/Porco_Rosso.jpg">
+          <img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg">
           <h4>Nom pelicula</h4>
           <p>Año</p>
           <a href="#">Leer más</a>
-      </div>
+        </div>
 
-      <div class="card">
-        <img class="size" src="https://static.wikia.nocookie.net/studio-ghibli/images/9/9e/Pom_Poko.jpg">
-        <h4>Nom pelicula</h4>
-        <p>Año</p>
-        <a href="#">Leer más</a>
+        <div class="card">
+          <img 
+            src="https://static.wikia.nocookie.net/studio-ghibli/images/a/a5/Grave_of_the_Fireflies_Japanese_poster.jpg">
+          <h4>Nom pelicula</h4>
+          <p>Año</p>
+          <a href="#">Leer más</a>
+        </div>
+
+        <div class="card">
+          <img src="https://static.wikia.nocookie.net/studio-ghibli/images/d/db/My_Neighbor_Totoro.jpg">
+          <h4>Nom pelicula</h4>
+          <p>Año</p>
+          <a href="#">Leer más</a>
+        </div>
+
+        <div class="card">
+          <img src="https://static.wikia.nocookie.net/studio-ghibli/images/a/a9/Only_Yesterday.jpg">
+          <h4>Nom pelicula</h4>
+          <p>Año</p>
+          <a href="#">Leer más</a>
+        </div>
+
+        <div class="card">
+          <img src="https://static.wikia.nocookie.net/studio-ghibli/images/4/41/Porco_Rosso.jpg">
+          <h4>Nom pelicula</h4>
+          <p>Año</p>
+          <a href="#">Leer más</a>
+        </div>
+
+        <div class="card">
+          <img src="https://static.wikia.nocookie.net/studio-ghibli/images/9/9e/Pom_Poko.jpg">
+          <h4>Nom pelicula</h4>
+          <p>Año</p>
+          <a href="#">Leer más</a>
+        </div>
+
+        <div class="card">
+          <img src="https://static.wikia.nocookie.net/studio-ghibli/images/7/7b/Whisper_of_the_Heart.jpg">
+          <h4>Nom pelicula</h4>
+          <p>Año</p>
+          <a href="#">Leer más</a>
+        </div>
+
+        <div class="card">
+          <img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c6/Princess_Mononoke.jpg">
+          <h4>Nom pelicula</h4>
+          <p>Año</p>
+          <a href="#">Leer más</a>
+        </div>
+
+        <div class="card">
+          <img 
+            src="https://static.wikia.nocookie.net/studio-ghibli/images/d/db/My_Neighbors_the_Yamadas.jpg">
+          <h4>Nom pelicula</h4>
+          <p>Año</p>
+          <a href="#">Leer más</a>
+        </div>
+
+        <div class="card">
+          <img src="https://static.wikia.nocookie.net/studio-ghibli/images/9/9e/Spirited_Away.png">
+          <h4>Nom pelicula</h4>
+          <p>Año</p>
+          <a href="#">Leer más</a>
+        </div>
+
+        <div class="card">
+          <img src="https://static.wikia.nocookie.net/studio-ghibli/images/8/87/The_Cat_Returns.jpg">
+          <h4>Nom pelicula</h4>
+          <p>Año</p>
+          <a href="#">Leer más</a>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://static.wikia.nocookie.net/studio-ghibli/images/0/08/Howl%27s_Moving_Castle.jpg">
+          <h4>Nom pelicula</h4>
+          <p>Año</p>
+          <a href="#">Leer más</a>
+        </div>
+
+        <div class="card">
+          <img src="https://static.wikia.nocookie.net/studio-ghibli/images/0/09/%C3%96v%C3%A4rlden.jpg">
+          <h4>Nom pelicula</h4>
+          <p>Año</p>
+          <a href="#">Leer más</a>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://static.wikia.nocookie.net/studio-ghibli/images/5/50/Ponyo_on_the_Cliff_by_the_Sea.jpg">
+          <h4>Nom pelicula</h4>
+          <p>Año</p>
+          <a href="#">Leer más</a>
+        </div>
+
+        <div class="card">
+          <img src="https://static.wikia.nocookie.net/studio-ghibli/images/4/46/The_Borrower_Arrietty.jpg">
+          <h4>Nom pelicula</h4>
+          <p>Año</p>
+          <a href="#">Leer más</a>
+        </div>
+
+        <div class="card">
+          <img src="https://static.wikia.nocookie.net/studio-ghibli/images/b/bb/From_Up_on_Poppy_Hill.jpg">
+          <h4>Nom pelicula</h4>
+          <p>Año</p>
+          <a href="#">Leer más</a>
+        </div>
+
+        <div class="card">
+          <img src="https://static.wikia.nocookie.net/studio-ghibli/images/2/2d/The_Wind_Rises.jpg">
+          <h4>Nom pelicula</h4>
+          <p>Año</p>
+          <a href="#">Leer más</a>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://static.wikia.nocookie.net/studio-ghibli/images/8/87/The_Tale_of_the_Princess_Kaguya.jpg">
+          <h4>Nom pelicula</h4>
+          <p>Año</p>
+          <a href="#">Leer más</a>
+        </div>
+
+        <div class="card">
+          <img src="https://static.wikia.nocookie.net/studio-ghibli/images/7/7a/When_Marnie_Was_There.jpg">
+          <h4>Nom pelicula</h4>
+          <p>Año</p>
+          <a href="#">Leer más</a>
+        </div>
+        </article>
+    </section>
+    <aside id="tororo">
+      <img src="img/pngegg.png" alt="">
+    </aside>
+  </main>
+  <footer>
+    <div id="piePagina">
+      <p> ESTUDIO GHIBLI - 1985 - TOKIO*JAPON</p>
     </div>
-
-    <div class="card">
-      <img class="size" src="https://static.wikia.nocookie.net/studio-ghibli/images/7/7b/Whisper_of_the_Heart.jpg">
-      <h4>Nom pelicula</h4>
-      <p>Año</p>
-      <a href="#">Leer más</a>
-  </div>
-
-  
-  <div class="card">
-    <img class="size" src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c6/Princess_Mononoke.jpg">
-    <h4>Nom pelicula</h4>
-    <p>Año</p>
-    <a href="#">Leer más</a>
-</div>
-
-<div class="card">
-  <img class="size" src="https://static.wikia.nocookie.net/studio-ghibli/images/d/db/My_Neighbors_the_Yamadas.jpg">
-  <h4>Nom pelicula</h4>
-  <p>Año</p>
-  <a href="#">Leer más</a>
-</div>
-
-<div class="card">
-<img class="size" src="https://static.wikia.nocookie.net/studio-ghibli/images/9/9e/Spirited_Away.png">
-<h4>Nom pelicula</h4>
-<p>Año</p>
-<a href="#">Leer más</a>
-</div>
-
-<div class="card">
-  <img class="size" src="https://static.wikia.nocookie.net/studio-ghibli/images/8/87/The_Cat_Returns.jpg">
-  <h4>Nom pelicula</h4>
-  <p>Año</p>
-  <a href="#">Leer más</a>
-</div>
-
-<div class="card">
-<img class="size" src="https://static.wikia.nocookie.net/studio-ghibli/images/0/08/Howl%27s_Moving_Castle.jpg">
-<h4>Nom pelicula</h4>
-<p>Año</p>
-<a href="#">Leer más</a>
-</div>
-
-<div class="card">
-<img class="size" src="https://static.wikia.nocookie.net/studio-ghibli/images/0/09/%C3%96v%C3%A4rlden.jpg">
-<h4>Nom pelicula</h4>
-<p>Año</p>
-<a href="#">Leer más</a>
-</div>
-
-<div class="card">
-<img class="size" src="https://static.wikia.nocookie.net/studio-ghibli/images/5/50/Ponyo_on_the_Cliff_by_the_Sea.jpg">
-<h4>Nom pelicula</h4>
-<p>Año</p>
-<a href="#">Leer más</a>
-</div>
-
-
-<div class="card">
-<img class="size" src="https://static.wikia.nocookie.net/studio-ghibli/images/4/46/The_Borrower_Arrietty.jpg">
-<h4>Nom pelicula</h4>
-<p>Año</p>
-<a href="#">Leer más</a>
-</div>
-
-<div class="card">
-<img class="size" src="https://static.wikia.nocookie.net/studio-ghibli/images/b/bb/From_Up_on_Poppy_Hill.jpg">
-<h4>Nom pelicula</h4>
-<p>Año</p>
-<a href="#">Leer más</a>
-</div>
-
-<div class="card">
-<img class="size" src="https://static.wikia.nocookie.net/studio-ghibli/images/2/2d/The_Wind_Rises.jpg">
-<h4>Nom pelicula</h4>
-<p>Año</p>
-<a href="#">Leer más</a>
-</div>
-<div class="card">
-  <img class="size" src="https://static.wikia.nocookie.net/studio-ghibli/images/8/87/The_Tale_of_the_Princess_Kaguya.jpg">
-  <h4>Nom pelicula</h4>
-  <p>Año</p>
-  <a href="#">Leer más</a>
-  </div>
-  
-  <div class="card">
-  <img class="size" src="https://static.wikia.nocookie.net/studio-ghibli/images/7/7a/When_Marnie_Was_There.jpg">
-  <h4>Nom pelicula</h4>
-  <p>Año</p>
-  <a href="#">Leer más</a>
-  </div>
-
-      </div>
-        </section>
-        <aside id="tororo">
-          <img src="img/pngegg.png" alt="">
-        </aside>
-      </main>
-      <footer >
-      <div id="piePagina"><p > ESTUDIO GHIBLI  - 1985  - TOKIO*JAPON</p></div>
-      </footer>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+  </footer>
+  <!--<div id="root"></div>-->
+  <script src="main.js" type="module"></script>
+</body>
 </html>
