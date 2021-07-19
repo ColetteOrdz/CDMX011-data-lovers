@@ -4,13 +4,13 @@ import  data  from './data/ghibli/ghibli.js';
 const showTitle = document.getElementById("titulos");
 const ghibliFilms = data.films;
 
-var titulos = ghibliFilms.map( titulo => {
-    return titulo.title;
+var titleYear = ghibliFilms.map( titulo => {
+    return `${titulo.title} ${titulo.release_date}`;
 })
 
-showTitle.innerHTML = titulos;
+showTitle.innerHTML = titleYear;
 
-console.log(titulos);
+console.log(titleYear);
 
 
 
