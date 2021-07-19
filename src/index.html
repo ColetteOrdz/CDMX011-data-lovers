@@ -1,20 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <p>FANDOM DATA BASE</p>
-      <input type="text" id="searchBtn" placeholder="Search"/><button value="OK">OK</button>
-    </header><br>
-    <div id="root"></div>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!--Cabecera-->
+  <header>
+    <div class="header-container">
+      <!--seleccion por pelicula-->
+      <div>
+        <select name="languague" class="selector">
+          <option value="pt">Ponyo</option>
+          <option value="id">Mar</option>
+          <option value="es" selected="">Tororo</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <!--opciones por: fecha, score, director-->
+  <nav id="opciones">
+    <select name="" class="selector">
+      <option value="a" selected>Año</option>
+      <option value="b">1986</option>
+      <option value="c">1987</option>
+    </select>
+    <select name="" class="selector">
+      <option value="a" selected>Calificacion</option>
+      <option value="b">86%</option>
+      <option value="c">17%</option>
+    </select>
+    <select name="" class="selector">
+      <option value="pt" selected>Director</option>
+      <option value="id">日本语</option>
+      <option value="es" >Collete</option>
+    </select>
+  </nav>
+
+  <main>
     <section>
-      <p id="titulos"></p>
+      <div id="titulos" class="container">
+
+      </div>
     </section>
-    <br><footer> ©Studio Ghibli. 1985-2021. Tokio, Japan </footer>
-    <script src="main.js" type="module"></script>
-  </body>
+    <aside id="totoro">
+      <img src="img/pngegg.png" alt="">
+    </aside>
+  </main>
+  <footer>
+    <div id="piePagina">
+      <p> ESTUDIO GHIBLI - 1985 - TOKIO*JAPON</p>
+    </div>
+  </footer>
+  <!--<div id="root"></div>-->
+  <script src="main.js" type="module"></script>
+</body>
 </html>
