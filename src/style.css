@@ -2,9 +2,9 @@
 body {
   margin: 0px;
 }
-/*CSS BUSQUEDA*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+/*CSS input BUSCAR*/
 .search {
   width: 100%;
   position: relative;
@@ -12,29 +12,25 @@ body {
 }
 
 .searchTerm {
+  align-content: center;
   width: 100%;
-  border: 3px solid #00B4CC;
+  border: 3px solid rgb(156 141 125);
   padding: 5px;
-  height: 20px;
+  height: 30px;
   border-radius: 14px;
   outline: none;
-  color: #9DBFAF;
+  color: #3b3f27;
 }
-
+/*css texto del input buscar*/
 .searchTerm:focus{
-  color: #00B4CC;
+  color: #11181a;
+  font-size: 1rem;
 }
-
-.searchButton {
-  width: 40px;
-  height: 36px;
-  border: 1px solid #00B4CC;
-  background: #00B4CC;
-  text-align: center;
-  color: #fff;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  font-size: 20px;
+/*css texto holder*/
+.searchTerm::placeholder {
+  color: rgb(49, 49, 38);
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 /*Resize the wrap to see the search bar change!*/
@@ -42,6 +38,8 @@ body {
   width: 30%;
   top: 50%;
   left: 50%;
+  background-color: rgb(184, 234, 234);
+  margin: auto;
 }
 
 /*cabecera*/
@@ -50,6 +48,13 @@ body {
   justify-content: flex-end;  
   background-color: rgb(184, 234, 234);
   padding: 15px;
+  height: 100%;/*ancho de header*/
+}
+
+.logo {
+  padding: 0px 619px 0px 138px;
+  line-height: 80px;
+  width: 300px;
 }
 
 /*CSS NAV opciones */
@@ -62,15 +67,19 @@ body {
 
 /*CSS SELECT selector de pelicula*/
 .selector {
-  border-radius: 4%;
-  padding: 12px;
-  width: 250px;
+  border: 3px solid rgb(156 141 125);
+  padding: 5px;
+  height: 45px;
+  border-radius: 14px;
+  outline: none;
+  width: 300px;
   font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
 }
 
 /*CSS main*/
 main {
-  height: 300vh;
+  height: 410vh;
   display: flex;
   background-color: rgb(252, 216, 212);
   font-family: "Ubuntu", sans-serif;
@@ -79,11 +88,15 @@ main {
 
 /*CSS aside img tororo*/
 #totoro {
+  background-image: url(img/aside1.png);
   background-repeat: no-repeat;
-  height: 100%;
-  width: 20%;
+  display: right;
+  height: 100vh;
+  background-repeat: no-repeat;
+  /*height: 100%;*/
+  width: 50%;
   overflow: inherit;
-  margin-left: -52px;
+  margin-left: -70px;
 }
 
 /*CSS FOOTER*/
@@ -92,6 +105,14 @@ main {
   background-color: rgb(193, 172, 149);
   padding: 5px;
   text-align: center;
+  height: 100%;
+}
+
+.img-footer {
+  padding: 0px 22px 0px 22px;
+  line-height: 80px;
+  width: 500px;
+  height: 280px;
 }
 
 /*CSS DE LAS TARJETAS*/
@@ -107,8 +128,8 @@ main {
 
 /*CSS*/
 .container .card {
-  width: 247px;
-  height: 390px;
+  width: 250px;
+  height: 415px;
   border-radius: 8px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   overflow: hidden;
