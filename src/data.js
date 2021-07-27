@@ -1,9 +1,5 @@
 import  data  from './data/ghibli/ghibli.js'; 
 
-//export const anotherExample = () => {
-//  return 'OMG';
-//};
-
 const ghibliFilms = data.films; //constante donde se almacena toda la información de la BD
 
 //Muestra los array de las películas de acuerdo a su puntuación

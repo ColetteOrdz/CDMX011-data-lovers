@@ -10,14 +10,10 @@
     <!--Cabecera-->
     <header>
       <div class="header-container">
+        <div class="imputBuscar">
+          <input type="text" class="searchTerm" placeholder="Buscar películas"/>
+        </div>
           <img src="img/logo.png" alt="logo" class="logo">
-        
-        <!--seleccion por pelicula-->
-        <div class="wrap">
-          <div class="search">
-             <input type="text" class="searchTerm" placeholder="Buscar">
-          </div>
-       </div>
       </div>
     </header>
   
@@ -68,6 +64,16 @@
       <option value="Gorō Miyazaki" >Goro Miyazaki</option>
       <option value="Hiromasa Yonebayashi" >Hiromasa Yonebayashi</option>
     </select>
+    <select name="" id="selectOrdenarTitulo" class="selector">
+      <option value="" selected>Ordenar títulos</option>
+      <option value="a-z">A to Z</option>
+      <option value="z-a">Z to A</option>
+    </select>
+    <select name="" id="selectOrdenarYear" class="selector">
+      <option value="" selected>Ordenar Años</option>
+      <option value="ascendente">Ascendente</option>
+      <option value="descendente">Descendente</option>
+    </select>
   </nav>
 
   <main>
@@ -75,11 +81,11 @@
       <div id="titulos" class="container">
       </div>
       </section>
-      <aside>
+      <!--<aside>
         <div id="tororoDerecha">
           <img src="img/aside1.png" alt="totoro" id="tororo">
         </div>
-      </aside>
+      </aside> -->
   </main>
     <footer>
     <div id="piePagina">
