@@ -76,13 +76,22 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
+body{
+  background-image: url(./img/fondoimg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgb(252, 216, 212);
+}
+
 /*CSS main*/
 main {
   height: 300vh;
   display: flex;
   background-color: rgb(252, 216, 212);
   font-family: "Ubuntu", sans-serif;
-  padding: 100px;
+  padding: 10, 90, 90, 90px;
 }
 
 /*CSS aside img tororo*/
@@ -100,6 +109,11 @@ main {
   background-color: rgb(193, 172, 149);
   padding: 5px;
   text-align: center;
+}
+
+.img-footer {
+  position: relative;
+  size: 25%;
 }
 
 /*CSS DE LAS TARJETAS*/
