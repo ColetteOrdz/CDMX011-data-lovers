@@ -1,20 +1,76 @@
-import  data  from './data/ghibli/ghibli.js'; 
-import { sortFilms } from './data.js'; 
+//import  data  from './data/ghibli/ghibli.js'; 
+import  studioGhibli  from './data.js'; 
 
-const showTitle = document.getElementById("titulos"); 
-//var infoFilms = (films) => {
-  //  return films.map( titulo => { 
-  //  return `
-  //  <div class="card">
-  //  <img src="${titulo.poster}" alt=${titulo.title}>
-  //  <h4>${titulo.title}</h4>
-  //  <p>${titulo.release_date}</p>
-  //  <p>Score ${titulo.rt_score}%</p>
-  //  </div>
-  //  `;
-//})}; 
+const showFilms = document.getElementById("titulos"); 
 
-// Const donde se aplica el método .map() para imprimir la información con una función, en las tarjetas
+showFilms.innerHTML = builtCards(studioGhibli.mostrarPelis());
+
+document.getElementsById("selectYear").addEventListener("change", function (e) {
+  let year =  e.currentTarget.value;
+  showFilms.innerHTML = builtCards(studioGhibli.filterByYear(year));
+  document.getElementsById("selectScore").value = "";
+  document.getElementsById("selectDirector").value = "";
+  document.getElementsById("selectProducer").value = "";
+  document.getElementsById("selectOrdenarTitulo").value = "";
+  document.getElementsById("selectOrdenarYear").value = "";
+});
+
+document.getElementsById("selectScore").addEventListener("change", function (e){
+  let score = e.currentTarget.value;
+  showFilms.innerHTML = builtCards(studioGhibli.filterByScore(score));
+  document.getElementsById("selectYear").value = "";
+  document.getElementsById("selectDirector").value = "";
+  document.getElementsById("selectProducer").value = "";
+  document.getElementsById("selectOrdenarTitulo").value = "";
+  document.getElementsById("selectOrdenarYear").value = "";
+});
+
+document.getElementsById("selectDirector").addEventListener("change", function (e){
+  let director = e.currentTarget.value;
+  showFilms.innerHTML = builtCards(studioGhibli.filterByDirector(director));
+  document.getElementsById("selectYear").value = "";
+  document.getElementsById("selectScore").value = "";
+  document.getElementsById("selectProducer").value = "";
+  document.getElementsById("selectOrdenarTitulo").value = "";
+  document.getElementsById("selectOrdenarYear").value = "";
+});
+
+document.getElementsById("selectProducer").addEventListener("change", function (e){
+  let productor = e.currentTarget.value;
+  showFilms.innerHTML = builtCards(studioGhibli.filterByProducer(productor));
+  document.getElementsById("selectYear").value = "";
+  document.getElementsById("selectScore").value = "";
+  document.getElementsById("selectDirector").value = "";
+  document.getElementsById("selectOrdenarTitulo").value = "";
+  document.getElementsById("selectOrdenarYear").value = "";
+});
+
+document.getElementsById("selectOrdenarTitulo").addEventListener("change", function (e){
+  let orden = e.currentTarget.value;
+  showFilms.innerHTML = builtCards(studioGhibli.ordenTitulo(orden));
+});
+
+document.getElementsById("selectoOrdenarYear").addEventListener("change", function (e){
+  let orden = e.currentTarget.value;
+  showFilms.innerHTML = builtCards(studioGhibli.ordenYear(orden));
+});
+
+function builtCards(studioGhibli) {
+  let showFilms = "";
+  studioGhibli.map( titulo => { 
+    showFilms += `
+    <div class="card">
+          <img src="${titulo.poster}" alt=${titulo.title}>
+          <h4>${titulo.title}</h4>
+          <p>${titulo.release_date}</p>
+          <p>Score: ${titulo.rt_score}%</p>
+    </div>
+    `;
+  });
+  return showFilms;
+}
+
+/*// Const donde se aplica el método .map() para imprimir la información con una función, en las tarjetas
 const infoFilms = ghibliFilms.map( titulo => { 
     return `
     <div class="card">
@@ -22,79 +78,25 @@ const infoFilms = ghibliFilms.map( titulo => {
           <h4>${titulo.title}</h4>
           <p>${titulo.release_date}</p>
           <p>Score ${titulo.rt_score}%</p>
-          <p><a href="otra_pagina.html"> Ver mas</a></p>
-        </div>
+    </div>
     `;
-})
+  })
 showTitle.innerHTML = infoFilms;
 
-//Muestro los arrays de las películas de acuerdo a su puntuación
-const filterHighScore = ghibliFilms.filter(film => film.rt_score == 89);
-const filterMediumScore = ghibliFilms.filter(film => film.rt_score >= 80 && film.rt_score < 90);
-const filterLowScore = ghibliFilms.filter(film => film.rt_score < 80);  
-    console.log(filterHighScore);
 
-
-//Evento onchange del select Año osea que se filtrara cuando se selectione una opcion
-//del select
-document.getElementById("selectYear").addEventListener("change", function(){
-
-    const tarjetasFiltradas = ghibliFilms.filter(film => film.release_date == this.value);
-
-    const cards = tarjetasFiltradas.map( titulo => { 
-        return `
-        <div class="card">
-              <img src="${titulo.poster}" alt=${titulo.title}>
-              <h4>${titulo.title}</h4>
-              <p>${titulo.release_date}</p>
-              <p>Score ${titulo.rt_score}%</p>
-              <p><a href="otra_pagina.html"> Ver mas</a></p>
-            </div>
-        `;
-    })
-    showTitle.innerHTML = cards;
-})  
-
-//Evento onchange del select Año osea que se filtrara cuando se selectione una opcion
-//del select
-document.getElementById("selectScore").addEventListener("change", function(){
-
-    const tarjetasFiltradas = ghibliFilms.filter(film => film.rt_score == this.value);
-
-    const cards = tarjetasFiltradas.map( titulo => { 
-        return `
-        <div class="card">
-              <img src="${titulo.poster}" alt=${titulo.title}>
-              <h4>${titulo.title}</h4>
-              <p>${titulo.release_date}</p>
-              <p>Score ${titulo.rt_score}%</p>
-              <p><a href="otra_pagina.html"> Ver mas</a></p>
-            </div>
-        `;
-    })
-    showTitle.innerHTML = cards;
-})   
-
-//Evento onchange del select Año osea que se filtrara cuando se selectione una opcion
-//del select
-document.getElementById("selectDirector").addEventListener("change", function(){
-
-    const tarjetasFiltradas = ghibliFilms.filter(film => film.director == this.value);
-
-    const cards = tarjetasFiltradas.map( titulo => { 
-        return `
-        <div class="card">
-              <img src="${titulo.poster}" alt=${titulo.title}>
-              <h4>${titulo.title}</h4>
-              <p>${titulo.release_date}</p>
-              <p>Score ${titulo.rt_score}%</p>
-              <p><a href="otra_pagina.html"> Ver mas</a></p>
-            </div>
-        `;
-    })
-    showTitle.innerHTML = cards;
-})   
 //console.log(titleYear);
-
+*/
+/*var infoFilms = (films) => {
+    return films.map( titulo => { 
+    return `
+    <div class="card">
+    <img src="${titulo.poster}" alt=${titulo.title}>
+    <h4>${titulo.title}</h4>
+    <p>${titulo.release_date}</p>
+    <p>Score ${titulo.rt_score}%</p>
+    </div>
+    `;
+})};
+*/ 
 
 

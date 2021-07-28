@@ -5,7 +5,7 @@ body {
 /*CSS BUSQUEDA*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-.search {
+/*.search {
   width: 100%;
   position: relative;
   display: flex;
@@ -21,10 +21,11 @@ body {
   color: #9DBFAF;
 }
 
+
 .searchTerm:focus{
   color: #00B4CC;
 }
-
+*/
 .searchButton {
   width: 40px;
   height: 36px;
@@ -49,7 +50,14 @@ body {
   display: flex;
   justify-content: flex-end;  
   background-color: rgb(184, 234, 234);
-  padding: 15px;
+  padding: 10px;
+}
+
+.logo {
+  position: right;
+ position: flex;
+ height: 20%;
+ width: 20%;
 }
 
 /*CSS NAV opciones */
@@ -64,7 +72,7 @@ body {
 .selector {
   border-radius: 4%;
   padding: 12px;
-  width: 250px;
+  width: 200px;
   font-family: "Ubuntu", sans-serif;
 }
 
