@@ -69,11 +69,7 @@ function builtCards(studioGhibli) {
           <p>${titulo.release_date}</p>
           <p>Score: ${titulo.rt_score}%</p>
     </div>
-    <div class="card backCard active"
-        <p> Director: <b>${titulo.director}</b></p>
-        <p> Productor: <b>${titulo.producer}</b></p>
-        <p> Description: <br> ${titulo.description}</p>
-        </div>
+   
         </div>
     `;
   });
@@ -95,7 +91,13 @@ function backCards(studioGhibli) {
   return showFilms;
 }
 
-/*// Const donde se aplica el método .map() para imprimir la información con una función, en las tarjetas
+/*
+ <div class="card backCard active"
+        <p> Director: <b>${titulo.director}</b></p>
+        <p> Productor: <b>${titulo.producer}</b></p>
+        <p> Description: <br> ${titulo.description}</p>
+        </div>
+// Const donde se aplica el método .map() para imprimir la información con una función, en las tarjetas
 const infoFilms = ghibliFilms.map( titulo => { 
     return `
     <div class="card">

@@ -86,14 +86,20 @@ body{
 }
 
 /*CSS main*/
-main {
+/*main {
+  background-image: url(./img/fondoimg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgb(252, 216, 212);
   height: 300vh;
   display: flex;
   background-color: rgb(252, 216, 212);
   font-family: "Ubuntu", sans-serif;
   padding: 10, 90, 90, 90px;
 }
-
+*/
 /*CSS aside img tororo*/
 #totoro {
   background-repeat: no-repeat;
