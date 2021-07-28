@@ -57,24 +57,21 @@ document.getElementById("selectOrdenarYear").addEventListener("change", function
   showFilms.innerHTML = builtCards(studioGhibli.ordenYear(orden));
 });
 
+
+
 //Información de las tajetas (frente)//
 function builtCards(studioGhibli) {
   let showFilms = "";
   studioGhibli.map( titulo => { 
     showFilms += `
-    <div class="tarjetas">
+    <div class="tarjeta">
       <div class="card">
           <img src="${titulo.poster}" alt=${titulo.title}>
           <h4>${titulo.title}</h4>
           <p>${titulo.release_date}</p>
-          <p>Score: ${titulo.rt_score}%</p>
-          
+          <p>Score: ${titulo.rt_score}%</p>          
       </div>
-      <div class="card backCard active"
-        <p> Director: <b>${titulo.director}</b></p>
-        <p> Productor: <b>${titulo.producer}</b></p>
-        <p> Description: <br> ${titulo.description}</p>
-      </div>
+      
     </div>
     `;
   });

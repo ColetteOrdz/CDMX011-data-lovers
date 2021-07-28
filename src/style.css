@@ -75,11 +75,6 @@ body {
   width: 200px;
   font-family: "Ubuntu", sans-serif;
 }
-header{
-  background-image: url(./img/caratotoro.png);
-  background-position: center center;
-  background-size: cover;
-}
 
 body{
   background-image: url(./img/fondoimg.jpg);
