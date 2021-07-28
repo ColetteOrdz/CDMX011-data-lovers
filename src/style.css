@@ -75,6 +75,11 @@ body {
   width: 200px;
   font-family: "Ubuntu", sans-serif;
 }
+header{
+  background-image: url(./img/caratotoro.png);
+  background-position: center center;
+  background-size: cover;
+}
 
 body{
   background-image: url(./img/fondoimg.jpg);
@@ -110,6 +115,7 @@ body{
 }
 
 /*CSS FOOTER*/
+
 #piePagina {
   font-family: "Ubuntu", sans-serif;
   background-color: rgb(193, 172, 149);
@@ -181,3 +187,15 @@ body{
   color: #38301f;
 }
 /*CSS RESPONSIVE*/
+.card.active {
+      transform: rotateY(180deg);
+}
+
+.btnModal {
+  border: 4px solid #fff;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(196, 48, 164);
+  background-color: cornsilk;
+}

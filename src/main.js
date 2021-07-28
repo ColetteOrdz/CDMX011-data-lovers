@@ -63,14 +63,19 @@ function builtCards(studioGhibli) {
   studioGhibli.map( titulo => { 
     showFilms += `
     <div class="tarjetas">
-    <div class="card">
+      <div class="card">
           <img src="${titulo.poster}" alt=${titulo.title}>
           <h4>${titulo.title}</h4>
           <p>${titulo.release_date}</p>
           <p>Score: ${titulo.rt_score}%</p>
+          
+      </div>
+      <div class="card backCard active"
+        <p> Director: <b>${titulo.director}</b></p>
+        <p> Productor: <b>${titulo.producer}</b></p>
+        <p> Description: <br> ${titulo.description}</p>
+      </div>
     </div>
-   
-        </div>
     `;
   });
   return showFilms;
