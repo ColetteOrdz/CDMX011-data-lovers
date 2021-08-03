@@ -3,7 +3,7 @@ import  studioGhibli  from './data.js';
 
 const showFilms = document.getElementById("titulos"); 
 
-showFilms.innerHTML = builtCards(studioGhibli.mostrarPelis());
+showFilms.innerHTML = builtCards(studioGhibli.showingFilms());
 
 //Filtros por categorías//
 document.getElementById("selectYear").addEventListener("change", function (e) {
@@ -12,8 +12,8 @@ document.getElementById("selectYear").addEventListener("change", function (e) {
   document.getElementById("selectScore").value = "";
   document.getElementById("selectDirector").value = "";
   document.getElementById("selectProducer").value = "";
-  document.getElementById("selectOrdenarTitulo").value = "";
-  document.getElementById("selectOrdenarYear").value = "";
+  document.getElementById("selectSortTitle").value = "";
+  document.getElementById("selectSortYear").value = "";
 });
 
 document.getElementById("selectScore").addEventListener("change", function (e){
@@ -22,8 +22,8 @@ document.getElementById("selectScore").addEventListener("change", function (e){
   document.getElementById("selectYear").value = "";
   document.getElementById("selectDirector").value = "";
   document.getElementById("selectProducer").value = "";
-  document.getElementById("selectOrdenarTitulo").value = "";
-  document.getElementById("selectOrdenarYear").value = "";
+  document.getElementById("selectSortTitle").value = "";
+  document.getElementById("selectSortYear").value = "";
 });
 
 document.getElementById("selectDirector").addEventListener("change", function (e){
@@ -32,8 +32,8 @@ document.getElementById("selectDirector").addEventListener("change", function (e
   document.getElementById("selectYear").value = "";
   document.getElementById("selectScore").value = "";
   document.getElementById("selectProducer").value = "";
-  document.getElementById("selectOrdenarTitulo").value = "";
-  document.getElementById("selectOrdenarYear").value = "";
+  document.getElementById("selectSortTitle").value = "";
+  document.getElementById("selectSortYear").value = "";
 });
 
 document.getElementById("selectProducer").addEventListener("change", function (e){
@@ -42,36 +42,42 @@ document.getElementById("selectProducer").addEventListener("change", function (e
   document.getElementById("selectYear").value = "";
   document.getElementById("selectScore").value = "";
   document.getElementById("selectDirector").value = "";
-  document.getElementById("selectOrdenarTitulo").value = "";
-  document.getElementById("selectOrdenarYear").value = "";
+  document.getElementById("selectSortTitle").value = "";
+  document.getElementById("selectSortYear").value = "";
 });
 
 //Orden por año y título//
-document.getElementById("selectOrdenarTitulo").addEventListener("change", function (e){
-  let orden = e.currentTarget.value;
-  showFilms.innerHTML = builtCards(studioGhibli.ordenTitulo(orden));
+document.getElementById("selectSortTitle").addEventListener("change", function (e){
+  let order = e.currentTarget.value;
+  showFilms.innerHTML = builtCards(studioGhibli.sortByTitle(order));
 });
 
-document.getElementById("selectOrdenarYear").addEventListener("change", function (e){
-  let orden = e.currentTarget.value;
-  showFilms.innerHTML = builtCards(studioGhibli.ordenYear(orden));
+document.getElementById("selectSortYear").addEventListener("change", function (e){
+  let order = e.currentTarget.value;
+  showFilms.innerHTML = builtCards(studioGhibli.sortByYear(order));
+  //console.log(typeof order);
 });
 
 
-
-//Información de las tajetas (frente)//
+//Información de las tajetas (frente/atrás)//
 function builtCards(studioGhibli) {
   let showFilms = "";
-  studioGhibli.map( titulo => { 
+  studioGhibli.map( film => { 
     showFilms += `
     <div class="tarjeta">
-      <div class="card">
-          <img src="${titulo.poster}" alt=${titulo.title}>
-          <h4>${titulo.title}</h4>
-          <p>${titulo.release_date}</p>
-          <p>Score: ${titulo.rt_score}%</p>          
+     <div class="tarjeta__inner">
+      <div class="card frontCard">
+          <img src="${film.poster}" alt=${film.title}>
+          <h4>${film.title}</h4>
+          <p>${film.release_date}</p>
+          <p>Score: ${film.rt_score}%</p>          
       </div>
-      
+      <div class="card backCard">
+          <p>Director: ${film.director}</p>
+          <p>Producer: ${film.producer}</p>
+          <p>Description: ${film.description}</p>
+      </div>
+     </div> 
     </div>
     `;
   });
@@ -79,6 +85,7 @@ function builtCards(studioGhibli) {
 }
 
 //Descripción de las películas (modal/atrás)//
+/*
 function backCards(studioGhibli) {
   let showFilms = "";
   studioGhibli.map( titulo => { 
@@ -92,6 +99,8 @@ function backCards(studioGhibli) {
   });
   return showFilms;
 }
+*/
+
 
 /*
  <div class="card backCard active"

@@ -6,7 +6,7 @@ let cardFilt = ghibliFilms;
 
 const studioGhibli = {
 
-  "mostrarPelis": function () {
+  "showingFilms": function () {
     return ghibliFilms
   },
 
@@ -34,9 +34,9 @@ const studioGhibli = {
 
   // Función para ordenar por a-z y z-a //
 
-  "ordenTitulo": function (orden) {
+  "sortByTitle": function (order) {
     let sortCard;
-    if (orden == "a-z") {
+    if (order == "a-z") {
       sortCard = cardFilt.sort(function (a,b){
         if (a.title > b.title){
           return 1;
@@ -63,9 +63,9 @@ const studioGhibli = {
 
   // Ordenar por año ascendente y descendente //
 
-  "ordenYear": function (orden) {
+  "sortByYear": function (order) {
     let sortCard;
-    if(orden == "ascendente") {
+    if(order == "ascendente") {
       sortCard = cardFilt.sort (function(a,b) {
         return parseFloat(a.release_date) - parseFloat(b.release_date);
       });
@@ -102,3 +102,17 @@ export const sortFilms = (categoria) => {
 };
 //console.log(scoreFilms);
 */
+
+/*"sortYearAscending": function (){ 
+      let sortCard = cardFilt.sort((a,b) => {
+          return parseFloat(a.release_date) - parseFloat(b.release_date)
+      });
+      return sortCard;
+    },
+
+    "sortYearDescending": function (){ 
+      let sortCard = cardFilt.sort((a,b) => {
+          return parseFloat(b.release_date) - parseFloat(a.release_date)
+      });
+      return sortCard;
+    },*/
