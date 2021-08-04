@@ -1,4 +1,4 @@
-//import { example, anotherExample } from '../src/data.js';
+import peliculas from './mockingdata';
 import  studioGhibli  from '../src/data.js'; 
 
 describe('studioGhibli', () => {
@@ -7,9 +7,23 @@ describe('studioGhibli', () => {
   })
 });
 
+describe('showingFilms', () => {
+  it('should be a function', () => {
+    expect(typeof studioGhibli.showingFilms).toBe('function');
+  });
+
+  it('should return 20 films', () => {
+    expect(studioGhibli.showingFilms().length).toBe(20);
+  });
+});
+
 describe('filterByYear', () => {
   it('is a function', () => {
     expect(typeof studioGhibli.filterByYear).toBe('function');
+  });
+
+  it('should return 2: "My heightbor Totoro" and "Grave of the fireflies"', () => {
+    expect(studioGhibli.filterByYear('1988').length).toBe(2);
   });
 
   it('should return "Castle in the sky"', () => {
@@ -222,6 +236,10 @@ describe('filterByYear', () => {
 describe('filterByScore', () => {
   it('is a function', () => {
     expect(typeof studioGhibli.filterByScore).toBe('function');
+  });
+
+  it('should return 3: "When Marnie was here", "Ponyo" and "Princess Mononoke"', () => {
+    expect(studioGhibli.filterByScore('92').length).toBe(3);
   });
 
   it('should return "Only Yesterday" and "The tale of Princess Kaguya"', () => {
@@ -475,6 +493,10 @@ describe('filterByDirector', () => {
     expect(typeof studioGhibli.filterByDirector).toBe('function');
   });
 
+  it('should return 9 films directed by Hayao Miyazaki', () => {
+    expect(studioGhibli.filterByDirector('Hayao Miyazaki').length).toBe(9);
+  });
+
   it('should return "The secret world of Arriety" and "When Marnie was here"', () => {
     let hiroFilms = [{
       "id": "2de9426b-914a-4a06-a3a0-5e6d9d3886f6",
@@ -725,6 +747,10 @@ describe('filterByProducer', () => {
     expect(typeof studioGhibli.filterByProducer).toBe('function');
   });
 
+  it('should return 14 films rpoduced by Toshio Suzuki', () => {
+    expect(studioGhibli.filterByProducer('Toshio Suzuki').length).toBe(14);
+  });
+
   it('should return "Grave of the fireflies"', () => {
     let toruFilms = [{
       "id": "12cfb892-aac0-4c5b-94af-521852e46d6a",
@@ -794,15 +820,29 @@ describe('filterByProducer', () => {
   });
 });
 
-
 describe('sortByYear', () => {
   it('is a function', () => {
     expect(typeof studioGhibli.sortByYear).toBe('function');
   });
-  
-  it('returns an array sorted by release date in ascending order', () => {
-    
-    expect(studioGhibli.sortByYear('ascendente').length
-    ).toEqual(20);
+
+  it('returns the length of the array sorted by release date in ascending order', () => {
+    expect(studioGhibli.sortByYear('ascendente').length).toBe(20);
+  });
+
+  it('returns an array sorted by year in ascending order', () => {
+    //console.log(studioGhibli.sortByYear('ascendente'));
+    expect(studioGhibli.sortByYear(peliculas)).toEqual(studioGhibli.sortByYear(peliculas));
   });
 });
+
+
+describe('sortByTitle', () => {
+  it('is a function', () => {
+    expect(typeof studioGhibli.sortByTitle).toBe('function');
+  });
+
+  it('returns an array sorted by title in ascending order', () => {
+    expect(studioGhibli.sortByTitle('a-z').length).toBe(20);
+  });
+});
+
