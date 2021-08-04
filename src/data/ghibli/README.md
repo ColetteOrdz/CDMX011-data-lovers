@@ -31,3 +31,4 @@ hallazgos.
   nuestras usuarias es importante saber cuáles son.
 - Adicionalmente a esta información, para nuestras usuarias es importante poder
   ver los tipos de especies que hay en cada animación.
+

@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
-  <title>Data Lovers</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/favicon.ico">
+  <script src="https://kit.fontawesome.com/3826312f3f.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css" />
+  <title>Data Lovers</title>
+
 </head>
+
 <body>
+<<<<<<< HEAD
     <!--Cabecera-->
     <header>
       <div class="header-container">
@@ -17,9 +24,22 @@
       </div>
     </header>
   
+=======
+  <!--Cabecera-->
+  <header>
+    <div class="logo">
+      <img src="img/logo.png" alt="logo">
+    </div>
+    <div class="caja_buscar">
+      <input type="search" placeholder="buscar">
+      <span class="fas fa-search"></span>
+    </div>
+  </header>
+
+>>>>>>> bd949de02d095e6ebdcde30d9c9dea36eec2a3fb
   <!--opciones por: fecha, score, director-->
-  <nav id="opciones">
-    <select name="" class="selector" id="selectYear">
+  <nav>
+    <select name="" id="selectYear">
       <option value="" selected>Año</option>
       <option value="1986">1986</option>
       <option value="1988">1988</option>
@@ -39,8 +59,8 @@
       <option value="2011">2011</option>
       <option value="2013">2013</option>
     </select>
-    <select name="" class="selector" id="selectScore">
-      <option value="" selected>Calificación</option>
+    <select name="" id="selectScore">
+      <option value="" selected>Calificacion</option>
       <option value="41">41%</option>
       <option value="75">75%</option>
       <option value="78">78%</option>
@@ -55,14 +75,25 @@
       <option value="97">97%</option>
       <option value="100">100%</option>
     </select>
-    <select name="" class="selector" id="selectDirector">
+    <select name="" id="selectDirector">
       <option value="" selected>Director</option>
       <option value="Isao Takahata">Isao Takahata</option>
-      <option value="Hayao Miyazaki" >Hayao Miyazaki</option>
+      <option value="Hayao Miyazaki">Hayao Miyazaki</option>
       <option value="Yoshifumi Kondō">Yoshifumi Kondo</option>
       <option value="Hiroyuki Morita">Hiroyuki Morita</option>
-      <option value="Gorō Miyazaki" >Goro Miyazaki</option>
-      <option value="Hiromasa Yonebayashi" >Hiromasa Yonebayashi</option>
+      <option value="Gorō Miyazaki">Goro Miyazaki</option>
+      <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+    </select>
+    <select name="" id="selectOrdenarTitulo">
+      <option value="" selected>Ordenar x titulo</option>
+      <option value="a-z">a-z</option>
+      <option value="z-a">z-a</option>
+    </select>
+    <select name="" id="selectOrdenarYear">
+      <!--ordenar=fecha-->
+      <option value="" selected>Ordenar x año</option>
+      <option value="ascendente">Ascendente</option>
+      <option value="descendente">Desendente</option>
     </select>
     <select name="" class="selector" id="selectProducer">
       <option value="" selected>Productor</option>
@@ -86,8 +117,9 @@
 
   <main>
     <section>
-      <div id="titulos" class="container">
+      <div id="contenedorTarjetasPeliculas" class="container">
       </div>
+<<<<<<< HEAD
       </section>
       <!--<div class="modal">
         <div class="contenedor">
@@ -108,7 +140,31 @@
       <p> ESTUDIO GHIBLI - 1985 - TOKIO*JAPON</p>
     </div>
   </footer> -->
+=======
+    </section>
+  </main>
+  <footer>
+    <div>
+      <img src="img/footer.png" alt="" class="img-footer">
+      <p> ESTUDIO GHIBLI - 1985 - TOKIO*JAPON</p>
+    </div>
+  </footer>
+
+  <!------------modal------------------>
+  <div class="modal" style="visibility: hidden;">
+    <div class="contenedor">
+      <header id="modal-titulo">SINOPSIS</header>
+      <label id="modal-cerrar">X</label>
+      <div class="contenido">
+        <!--<h3 id="modal-titulo"></h3>-->
+        <img src="img/modalpic.png" alt="" class="img-footer">
+        <p id="modal-descripcion"></p>
+      </div>
+    </div>
+  </div>
+>>>>>>> bd949de02d095e6ebdcde30d9c9dea36eec2a3fb
   <!--<div id="root"></div>-->
   <script src="main.js" type="module"></script>
 </body>
+
 </html>

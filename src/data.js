@@ -1,118 +1,104 @@
-//import { parse } from '@babel/core'; //
-import  data  from './data/ghibli/ghibli.js'; 
+//importamos la 'data' en 'dataFunciones' para mantener la logica de la aplicacion en un solo js
+import baseDatos from './data/ghibli/ghibli.js';
 
-const ghibliFilms = data.films; //constante donde se almacena toda la información de la BD
-let cardFilt = ghibliFilms;
+//constante donde se almacena toda la información de la BD
+const ghibliFilms = baseDatos.films;
 
-const studioGhibli = {
+//variable global que mantiene los elementos filtrados
+//que seran utilizados unica y exclusivamente para ordenar
+let tarjetasFiltradas = ghibliFilms;
 
-  "showingFilms": function () {
-    return ghibliFilms
+//objeto con las funciones para la data
+const dataFunciones = {
+
+  //funcion para cargar todas las peliculas
+  "mostrarTodo": function () {
+    //Iteramos cada pelicula de la base de datos con la funcion map
+    return ghibliFilms;
   },
 
-  // Funciones para filtrar por categorías //
-
-  "filterByYear": function (year) {
-    cardFilt = ghibliFilms.filter(film => film.release_date == year)
-    return cardFilt;
+  /*------- funciones filtrar -------*/
+  //funcion para realizar el filtro por año
+  "filtrarPorAño": function (year) {
+    tarjetasFiltradas = ghibliFilms.filter(film => film.release_date == year);
+    return tarjetasFiltradas;
   },
 
-  "filterByScore": function (score) {
-    cardFilt = ghibliFilms.filter(film => film.rt_score == score)
-    return cardFilt;
+  //funcion para realizar el filtro por score
+  "filtrarPorScore": function (score) {
+    tarjetasFiltradas = ghibliFilms.filter(film => film.rt_score == score);
+    return tarjetasFiltradas;
   },
 
-  "filterByDirector": function (director) {
-    cardFilt = ghibliFilms.filter (film => film.director == director)
-    return cardFilt;
+  //funcion para realizar el filtro por director
+  "filtrarPorDirector": function (director) {
+    tarjetasFiltradas = ghibliFilms.filter(film => film.director == director);
+    return tarjetasFiltradas;
   },
 
-  "filterByProducer": function (productor) {
-    cardFilt = ghibliFilms.filter (film => film.producer == productor)
-    return cardFilt;
-  },
+  /*------- funciones de orden -------*/
+  //funcion para ordenar por titulo a-z/z-a
+  "ordenarPorTitulo": function (orden) {
+    //variable para almacenar la data ordenada
+    let tarjetasOrdenadas;
 
-  // Función para ordenar por a-z y z-a //
-
-  "sortByTitle": function (order) {
-    let sortCard;
-    if (order == "a-z") {
-      sortCard = cardFilt.sort(function (a,b){
-        if (a.title > b.title){
+    //Ascendente
+    if (orden == "a-z") {
+      tarjetasOrdenadas = tarjetasFiltradas.sort(function (a, b) {
+        if (a.title > b.title) {
           return 1;
         }
-        if (a.title < b.title){
+        if (a.title < b.title) {
           return -1;
         }
-        return 0;
+        // a must be equal to b
+        // return 0;
       });
     }
+    //Descendente
     else {
-      sortCard = cardFilt.sort(function (a,b){
-        if (b.title > a.title){
-          return 1;
-        }
-        if (b.title < a.title){
+      tarjetasOrdenadas = tarjetasFiltradas.sort(function (a, b) {
+        /*if (b.title > a.title) {
+         // return 1;
+        }*/
+        if (b.title < a.title) {
           return -1;
         }
-        return 0;
+        // a must be equal to b
+        //return 0;
       });
     }
-    return sortCard;
+
+    return tarjetasOrdenadas;
   },
 
-  // Ordenar por año ascendente y descendente //
+  //funcion para ordenar por año
+  "ordenarPorAño": function (orden) {
+    //variable para almacenar la data ordenada
+    let tarjetasOrdenadas;
 
-  "sortByYear": function (order) {
-    let sortCard;
-    if(order == "ascendente") {
-      sortCard = cardFilt.sort (function(a,b) {
+    if (orden == "ascendente") {
+      tarjetasOrdenadas = tarjetasFiltradas.sort(function (a, b) {
         return parseFloat(a.release_date) - parseFloat(b.release_date);
       });
     }
     else {
-      sortCard = cardFilt.sort (function(a,b) {
+      tarjetasOrdenadas = tarjetasFiltradas.sort(function (a, b) {
         return parseFloat(b.release_date) - parseFloat(a.release_date);
       });
     }
-    return sortCard;
+
+    return tarjetasOrdenadas;
+
   },
+
+  /*------- funcion para buscar por id de pelicula -------*/
+  "buscarPeliculaPorId": function (id) {
+    return tarjetasFiltradas.filter(film => film.id == id);
+  }
 }
 
-export default studioGhibli;
 
-/*//Muestra los array de las películas de acuerdo a su puntuación
-export const filterByScore = () => {
-  const filterHighScore = ghibliFilms.filter(film => film.rt_score >= 90);
-  const filterMediumScore = ghibliFilms.filter(film => film.rt_score >= 80 && film.rt_score < 90);
-  const filterLowScore = ghibliFilms.filter(film => film.rt_score < 80);    
-  //console.log(filterHighScore);
+export default dataFunciones;
 
-    return filterByScore;
-};
 
-//Ordena los array por score más alto al más bajo
-export const sortFilms = (categoria) => {
-  console.log(typeof categoria)
-  const sortScore = ghibliFilms.sort((scr1, scr2) => {
-    return scr2[categoria] - scr1[categoria]
-  });
-  console.log(sortScore);
-    return sortScore;
-};
-//console.log(scoreFilms);
-*/
-
-/*"sortYearAscending": function (){ 
-      let sortCard = cardFilt.sort((a,b) => {
-          return parseFloat(a.release_date) - parseFloat(b.release_date)
-      });
-      return sortCard;
-    },
-
-    "sortYearDescending": function (){ 
-      let sortCard = cardFilt.sort((a,b) => {
-          return parseFloat(b.release_date) - parseFloat(a.release_date)
-      });
-      return sortCard;
-    },*/
