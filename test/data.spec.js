@@ -831,7 +831,7 @@ describe('sortByYear', () => {
 
   it('returns an array sorted by year in ascending order', () => {
     //console.log(studioGhibli.sortByYear('ascendente'));
-    expect(studioGhibli.sortByYear(peliculas)).toEqual(studioGhibli.sortByYear(peliculas));
+    expect(studioGhibli.sortByYear('ascendente')).toEqual(studioGhibli.sortByYear(peliculas));
   });
 });
 
