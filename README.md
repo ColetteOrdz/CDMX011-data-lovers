@@ -65,7 +65,8 @@ Saber cuántas películas se han hecho por año
 - Manipulación del DOM para que aparezcan las tarjetas con su título y año
 
 
-![Screenshot](hu_2.png)
+![Screenshot](https://github.com/ColetteOrdz/CDMX011-data-lovers/blob/development/src/img/hu_2.png)
+
 
 III. La historia de usuario tres consistió en hacer un filtro donde se pudieran seleccionar las películas de acuerdo a su porcentaje de calificación de cada una.
 *Yo como:*
