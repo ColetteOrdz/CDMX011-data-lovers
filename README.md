@@ -146,7 +146,7 @@ Decidir si deseo verla o es de mi agrado
 - Enlazar el botón y la función
 
 
-![Screenshot](hhttps://github.com/ColetteOrdz/CDMX011-data-lovers/blob/development/src/img/hu_7.png)
+![Screenshot](https://github.com/ColetteOrdz/CDMX011-data-lovers/blob/development/src/img/hu_7.png)
 
 ---------------------------------------------------------
 # 4. Testing Unitario
