@@ -18,7 +18,7 @@ document.getElementById("selectYear").addEventListener("change", function (e) {
     document.getElementById("selectDirector").value = "";
     document.getElementById("selectOrdenarTitulo").value = "";
     document.getElementById("selectOrdenarYear").value = "";
-})
+});
 
 //Evento onchange del select Año osea que se filtrara cuando se selectione una opcion
 //del select
@@ -29,7 +29,7 @@ document.getElementById("selectScore").addEventListener("change", function (e) {
     document.getElementById("selectDirector").value = "";
     document.getElementById("selectOrdenarTitulo").value = "";
     document.getElementById("selectOrdenarYear").value = "";
-})
+});
 
 //Evento onchange del select Año osea que se filtrara cuando se selectione una opcion
 //del select
