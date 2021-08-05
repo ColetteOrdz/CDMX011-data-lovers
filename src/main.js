@@ -94,7 +94,7 @@ function construirHTMLDeTarjetas(baseDatos) {
             <h4>${pelicula.title}</h4>
             <p>${pelicula.release_date}</p>
             <p>Score ${pelicula.rt_score}%</p>
-            <button id="btn-modal" data-id="${pelicula.id}">Ver mas</button>  
+            <button id="btn-modal" data-id="${pelicula.id}">More info</button>  
           </div>
       `;
     });
