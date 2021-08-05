@@ -15,26 +15,26 @@
 ***
 
 DATA LOVERS -STUDIO GHIBLI
-1. Título: "Fandom Data Base"
+# 1. Título: "Fandom Data Base"
 Consiste en una página web donde se muestra la infromación más importante de todas las películas que ha producido el Studio Ghibli a lo largo de los años.
 ---------------------------------------------------------
-2. Resumen del proyecto
+# 2. Resumen del proyecto
 La página va dirigida para las personas que son usuarias de las películas, así como al público en general que está dispuesto a conocer más sobre los trabajos del estudio y quisiera adentrarse a este extenso mundo de películas.
 La interfaz consiste en una página con diseño que incluye al personaje más entrañable del estudio: Totoro. Cuenta con diversos filtros los cuales ayudan al usuario a depurar la información que le interesa, tales como: filtro por año, director y calificación. De igual manera, las películas se pueden ordenar de manera ascendente y descendente de acuerdo al título y el año de lanzamiento, para que el usuario pueda encotrar las películas más recientes y/o antiguas.
 Las tarjetas, que incluyen el poster e información básica de las películas, cuentan con un botón "ver más" que abre una ventana modal donde se muestra el resumen de la respectiva película para que el usuario pueda conocer más sobre esta.
     Se realizaron dos prototipos iniciales en papel:
 
 
-![Screenshot](prototipo_lapiz.jpg)
-![Screenshot](prototipo_lapiz0.jpeg)
+![Screenshot](https://github.com/ColetteOrdz/CDMX011-data-lovers/blob/development/src/img/prototipo_lapiz.jpg)
+![Screenshot](phttps://github.com/ColetteOrdz/CDMX011-data-lovers/blob/development/src/img/prototipo_lapiz0.jpeg)
 
     Después de iteraciones se realizó el prototipo final y se elaboró con la herramienta Google Slides, donde se determinó la paleta de colores a utilizar:
 
-![Screenshot](prototipo_alta_fidelidad_1.png)
+![Screenshot](https://github.com/ColetteOrdz/CDMX011-data-lovers/blob/development/src/img/prototipo_alta_fidelidad_1.png)
 
     En un feedback se recomendó la implementación de un botón para mostrar la información en lugar de hacer que las tarjetas giraran, para tomar en cuenta la funcionalidad en dispositivos móviles.
 ---------------------------------------------------------
-3. Historias de Usuario
+# 3. Historias de Usuario
 Se realizaron 7 historias de usuario, de acuerdo al filtro que se implementaba
 I. La primer historia de usuario consistió en maquetar el prototipo de alta fidelidad con HTML y CSS, también se elaboraron las tarjetas donde se mostraría la información básica de las películas (póster, año, título, score) y con JS se imprimieron en la página.
 *Yo como:*
@@ -49,7 +49,7 @@ Conocer los datos básicos de cada una de ellas, como el póster, el título, a�
 - Cada película debe tener su propia tarjeta con información
 
 
-![Screenshot](prototipo_hu1.png)
+![Screenshot](https://github.com/ColetteOrdz/CDMX011-data-lovers/blob/development/src/img/prototipo_hu1.png)
 
 II. La segunda HU consistió en implementar un filtro donde mostrara las películas de acuerdo al año de lanzamiento.
 *Yo como:*
@@ -82,7 +82,7 @@ Saber si son buenas y verlas, o descartarlas
 - Manipulación del DOM para que aparezcan las tarjetas con su título, año y puntuación
 
 
-![Screenshot](hu_3.png)
+![Screenshot](https://github.com/ColetteOrdz/CDMX011-data-lovers/blob/development/src/img/hu_3.png)
 
 IV. La cuarta HU consistió en implementar un filtro con los directores de cada película, al seleccionar un nombre se mostrarían todas las películas donde participó.
 *Yo como:*
@@ -98,7 +98,7 @@ Poder ver las películas de mi director favorito
 - Manipulación del DOM para que aparezcan las tarjetas con su título, año, puntuación y el director 
 
 
-![Screenshot](hu_4.png)
+![Screenshot](https://github.com/ColetteOrdz/CDMX011-data-lovers/blob/development/src/img/hu_4.png)
 
 V. La quinta HU consistió en implementar una función de ordenamiento de acuerdo al título de las películas, en orden ascendente y descendente. Esta opción se aplicará también si alguno de los filtros anteriores está seleccionado.
 *Yo como:*
@@ -114,7 +114,7 @@ Que mi vista de la lista sea más sencilla y encuentre las películas con mayor 
 - Manipulación del DOM para que aparezcan las tarjetas con su título, año, puntuación en orden ascendente y descendete 
 
 
-![Screenshot](.../img/hu_5.png)
+![Screenshot](https://github.com/ColetteOrdz/CDMX011-data-lovers/blob/development/src/img/hu_5.png)
 
 VI. La sexta HU consistió en implementar una función de ordenamiento de acuerdo a los años de lanzamiento, se mostrarían desde la película más reciente hasta la más antigua y de manera inversa. También esta opción se aplicaría si alguno de los primeros filtros está seleccionado.
 *Yo como:*
@@ -130,7 +130,7 @@ Que mi vista de la lista sea más sencilla y encuentre las películas con mayor 
 - Manipulación del DOM para que aparezcan las tarjetas con su título, año, puntuación de la más reciente a la más antigüa y visceversa
 
 
-![Screenshot](hu_6.png)
+![Screenshot](https://github.com/ColetteOrdz/CDMX011-data-lovers/blob/development/src/img/hu_6.png)
 
 VII. La última HU consistió en mostrar el resumen de cada película en una ventana modal, al dar click en el botón "ver más" que aparece en las tarjetas.
 *Yo como:*
@@ -146,9 +146,9 @@ Decidir si deseo verla o es de mi agrado
 - Enlazar el botón y la función
 
 
-![Screenshot](hu_7.png)
+![Screenshot](hhttps://github.com/ColetteOrdz/CDMX011-data-lovers/blob/development/src/img/hu_7.png)
 
 ---------------------------------------------------------
-4. Testing Unitario
+# 4. Testing Unitario
 Por último se realizaron los test de cada una de las funciones para comprobar su estado, en algunas se implementó el mocking de la data original para facilitar el proceso.
 Se llegó a la conclusión de hacer la implementación del testing al finalizar cada historia de usuario.

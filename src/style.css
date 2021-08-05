@@ -11,11 +11,11 @@
 
 /*-------CSS HEADER-------*/
 header {
-  display: flex;
+  display: flex;/*FLEX BOX*/
   width: 100%;
   background-color: rgb(184, 234, 234);
   position: relative;
-  justify-content: space-between;
+  justify-content: space-between;/*FLEX BOX*/
   text-align: center;
   padding: 1rem 2rem;
 }
@@ -31,7 +31,7 @@ header .logo img {
 }
 
 header .caja_buscar {
-  display: flex;
+  display: flex;/*FLEX BOX*/
   font-size: 1rem;
   height: 35px;
   margin: auto 0;
@@ -58,8 +58,8 @@ header .caja_buscar span {
 
 /*------- CSS NAV opciones -------*/
 nav {
-  display: inline-block;
-  justify-content: center;
+  display: inline-block;/*FLEX BOX*/
+  justify-content: center;/*FLEX BOX*/
   text-align: center;
   width: 100%;
   border: none;
@@ -81,9 +81,9 @@ nav select {
 /*------- MAIN -------*/
 main {
   background: url("img/aside1.png") no-repeat right top rgb(252, 216, 212);
-  justify-content: center;
+  justify-content: center;/*FLEX BOX*/
   width: 100%;
-  display: flex;
+  display: flex;/*FLEX BOX*/
   padding: 100px;
   position: relative;
 }
@@ -96,9 +96,9 @@ main section {
 .container {
   width: 100%;
   max-width: 1200px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: flex;/*FLEX BOX*/
+  flex-wrap: wrap;/*FLEX BOX*/
+  justify-content: center;/*FLEX BOX propiedad de alineacion*/
   margin: 0;
 }
 
@@ -185,22 +185,23 @@ footer div img {
 }
 
 /*------- CSS RESPONSIVE -------*/
-/*cuando la pantalla es menor a 768px (tablest y telefonos inteligentes)*/
+/*esta parte de la regla se denomina función multimedia e instruye al compilador CSS a aplicar los estilos a dispositivos con un ancho de 768 píxeles o menos.*/
 @media screen and (max-width: 768px) {
   header {
-    display: block;
+    display: block;/*FLEX BOX*/
     padding: 0;
   }
 
   header .logo {
-    display: inline-block;
+    display: inline-block;/*FLEX BOX*/
     padding: 1rem 2rem;
   }
 
   header .caja_buscar {
-    display: inline-flex;
+    display: inline-flex;/*FLEX BOX*/
     width: 100%;
-    justify-content: center;
+    justify-content: center;/*FLEX BOX propiedad de alineacion*/
+
     margin-bottom: 1rem;
     height: 35px;
   }
@@ -210,19 +211,18 @@ footer div img {
   }
 
   nav select {
-    display: inline-flex;
+    display: inline-flex;/*FLEX BOX*/
     width: 100%;
-    justify-content: center;
+    justify-content: center;/*FLEX BOX propiedad de alineacion*/
     margin-bottom: 1rem;
     height: 35px;
   }
 
   main {
     background: rgb(252, 216, 212);
-    justify-content: center;
+    justify-content: center;/*FLEX BOX propiedad de alineacion*/
     width: 100%;
-    display: flex;
-
+    display: flex;/*FLEX BOX*/
     padding: 100px;
     position: relative;
   }
@@ -232,9 +232,9 @@ footer div img {
 
 .modal {
   background: rgba(0, 0, 0, 0.5);
-  display: flex;
+  display: flex;/*FLEX BOX*/
   height: 100vh;
-  justify-content: center;
+  justify-content: center; /*FLEX BOX propiedad de alineacion*/
   left: 0;
   transition: all 500ms ease;
   opacity: 0;
@@ -246,7 +246,7 @@ footer div img {
 }
 
 .modal .contenedor {
-  align-content: center;
+  align-content: center; /*FLEX BOX propiedad de alineacion*/
   width: 600px;
   height: 400px;
   margin: auto;
