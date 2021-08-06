@@ -25,15 +25,14 @@ Las tarjetas, que incluyen el poster e información básica de las películas, c
     Se realizaron dos prototipos iniciales en papel:
 
 
-![Screenshot](https://github.com/ColetteOrdz/CDMX011-data-lovers/blob/development/src/img/prototipo_lapiz.jpg)
-![Screenshot](https://coletteordz.github.io/CDMX011-data-lovers/src/img/prototipo_lapiz.jpg)
+![Screenshot](https://coletteordz.github.io/CDMX011-data-lovers/src/img/prototipo_lapiz0.jpg)
 
-![Screenshot](phttps://github.com/ColetteOrdz/CDMX011-data-lovers/blob/development/src/img/prototipo_lapiz0.jpeg)
+
 ![Screenshot](https://coletteordz.github.io/CDMX011-data-lovers/src/img/prototipo_lapiz.jpg)
 
     Después de iteraciones se realizó el prototipo final y se elaboró con la herramienta Google Slides, donde se determinó la paleta de colores a utilizar:
 
-![Screenshot](https://github.com/ColetteOrdz/CDMX011-data-lovers/blob/development/src/img/prototipo_alta_fidelidad_1.png)
+
 ![Screenshot](https://coletteordz.github.io/CDMX011-data-lovers/src/img/prototipo_alta_fidelidad_1.png)
 
     En un feedback se recomendó la implementación de un botón para mostrar la información en lugar de hacer que las tarjetas giraran, para tomar en cuenta la funcionalidad en dispositivos móviles.
@@ -53,7 +52,6 @@ Conocer los datos básicos de cada una de ellas, como el póster, el título, a�
 - Cada película debe tener su propia tarjeta con información
 
 
-![Screenshot](https://github.com/ColetteOrdz/CDMX011-data-lovers/blob/development/src/img/prototipo_hu1.png)
 ![Screenshot](https://coletteordz.github.io/CDMX011-data-lovers/src/img/prototipo_hu1.png)
 II. La segunda HU consistió en implementar un filtro donde mostrara las películas de acuerdo al año de lanzamiento.
 *Yo como:*
@@ -69,7 +67,6 @@ Saber cuántas películas se han hecho por año
 - Manipulación del DOM para que aparezcan las tarjetas con su título y año
 
 
-![Screenshot](https://github.com/ColetteOrdz/CDMX011-data-lovers/blob/development/src/img/hu_2.png)
 ![Screenshot](https://coletteordz.github.io/CDMX011-data-lovers/src/img/hu_2.png)
 
 III. La historia de usuario tres consistió en hacer un filtro donde se pudieran seleccionar las películas de acuerdo a su porcentaje de calificación de cada una.
@@ -85,8 +82,6 @@ Saber si son buenas y verlas, o descartarlas
 - Función con método "filter()" para seleccionar por la categoría "rt_score"
 - Manipulación del DOM para que aparezcan las tarjetas con su título, año y puntuación
 
-
-![Screenshot](https://github.com/ColetteOrdz/CDMX011-data-lovers/blob/development/src/img/hu_3.png)
 ![Screenshot](https://coletteordz.github.io/CDMX011-data-lovers/src/img/hu_3.png)
 
 IV. La cuarta HU consistió en implementar un filtro con los directores de cada película, al seleccionar un nombre se mostrarían todas las películas donde participó.
@@ -103,7 +98,6 @@ Poder ver las películas de mi director favorito
 - Manipulación del DOM para que aparezcan las tarjetas con su título, año, puntuación y el director 
 
 
-![Screenshot](https://github.com/ColetteOrdz/CDMX011-data-lovers/blob/development/src/img/hu_4.png)
 ![Screenshot](https://coletteordz.github.io/CDMX011-data-lovers/src/img/hu_4.png)
 
 V. La quinta HU consistió en implementar una función de ordenamiento de acuerdo al título de las películas, en orden ascendente y descendente. Esta opción se aplicará también si alguno de los filtros anteriores está seleccionado.
@@ -120,7 +114,6 @@ Que mi vista de la lista sea más sencilla y encuentre las películas con mayor 
 - Manipulación del DOM para que aparezcan las tarjetas con su título, año, puntuación en orden ascendente y descendete 
 
 
-![Screenshot](https://github.com/ColetteOrdz/CDMX011-data-lovers/blob/development/src/img/hu_5.png)
 ![Screenshot](https://coletteordz.github.io/CDMX011-data-lovers/src/img/hu_5.png)
 
 VI. La sexta HU consistió en implementar una función de ordenamiento de acuerdo a los años de lanzamiento, se mostrarían desde la película más reciente hasta la más antigua y de manera inversa. También esta opción se aplicaría si alguno de los primeros filtros está seleccionado.
@@ -137,7 +130,6 @@ Que mi vista de la lista sea más sencilla y encuentre las películas con mayor 
 - Manipulación del DOM para que aparezcan las tarjetas con su título, año, puntuación de la más reciente a la más antigüa y visceversa
 
 
-![Screenshot](https://github.com/ColetteOrdz/CDMX011-data-lovers/blob/development/src/img/hu_6.png)
 ![Screenshot](https://coletteordz.github.io/CDMX011-data-lovers/src/img/hu_6.png)
 
 VII. La última HU consistió en mostrar el resumen de cada película en una ventana modal, al dar click en el botón "ver más" que aparece en las tarjetas.
@@ -154,10 +146,10 @@ Decidir si deseo verla o es de mi agrado
 - Enlazar el botón y la función
 
 
-![Screenshot](https://github.com/ColetteOrdz/CDMX011-data-lovers/blob/development/src/img/hu_7.png)
 ![Screenshot](https://coletteordz.github.io/CDMX011-data-lovers/src/img/hu_7.png)
 
 ---------------------------------------------------------
 # 4. Testing Unitario
 Por último se realizaron los test de cada una de las funciones para comprobar su estado, en algunas se implementó el mocking de la data original para facilitar el proceso.
 Se llegó a la conclusión de hacer la implementación del testing al finalizar cada historia de usuario.
+ 
