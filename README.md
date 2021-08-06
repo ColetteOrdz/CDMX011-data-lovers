@@ -25,7 +25,7 @@ Las tarjetas, que incluyen el poster e información básica de las películas, c
     Se realizaron dos prototipos iniciales en papel:
 
 
-![Screenshot](https://coletteordz.github.io/CDMX011-data-lovers/src/img/prototipo_lapiz0.jpg)
+![Screenshot](https://coletteordz.github.io/CDMX011-data-lovers/src/img/prototipo_lapiz0.jpeg)
 
 
 ![Screenshot](https://coletteordz.github.io/CDMX011-data-lovers/src/img/prototipo_lapiz.jpg)
