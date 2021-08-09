@@ -18,26 +18,26 @@ const dataFunciones = {
   },
 
   /*------- funciones filtrar -------*/
-  //funcion para realizar el filtro por año
+ 
   "filtrarPorAño": function (year) {
     tarjetasFiltradas = ghibliFilms.filter(film => film.release_date == year);
     return tarjetasFiltradas;
   },
 
-  //funcion para realizar el filtro por score
+ 
   "filtrarPorScore": function (score) {
     tarjetasFiltradas = ghibliFilms.filter(film => film.rt_score == score);
     return tarjetasFiltradas;
   },
 
-  //funcion para realizar el filtro por director
+
   "filtrarPorDirector": function (director) {
     tarjetasFiltradas = ghibliFilms.filter(film => film.director == director);
     return tarjetasFiltradas;
   },
 
   /*------- funciones de orden -------*/
-  //funcion para ordenar por titulo a-z/z-a
+  
   "ordenarPorTitulo": function (orden) {
     //variable para almacenar la data ordenada
     let tarjetasOrdenadas;
@@ -51,21 +51,17 @@ const dataFunciones = {
         if (a.title < b.title) {
           return -1;
         }
-        // a must be equal to b
-        // return 0;
+      
       });
     }
     //Descendente
     else {
       tarjetasOrdenadas = tarjetasFiltradas.sort(function (a, b) {
-        /*if (b.title > a.title) {
-         // return 1;
-        }*/
+        
         if (b.title < a.title) {
           return -1;
         }
-        // a must be equal to b
-        //return 0;
+        
       });
     }
 

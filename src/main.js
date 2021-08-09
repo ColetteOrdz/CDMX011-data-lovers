@@ -72,13 +72,13 @@ document.getElementById("modal-cerrar").addEventListener("click", function(){
 document.addEventListener("click", function(e){
     if (e.target.getAttribute("id") == "btn-modal") {
         let modal = document.querySelectorAll(".modal")[0];
+        //console.log(document.querySelectorAll(".modal"));
         modal.style.opacity = "1";
         modal.style.visibility = "visible";
-        let idPelicula = e.target.getAttribute("data-id");
+        let idPelicula = e.target.getAttribute("data-id"); //trae a información de la respectiva película a la que se le dio click
         let data = dataFunciones.buscarPeliculaPorId(idPelicula);
         document.getElementById("modal-titulo").innerText=data[0].title;
         document.getElementById("modal-descripcion").innerText=data[0].description;
-
     }
 });
 
